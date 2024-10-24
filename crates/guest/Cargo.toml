@@ -1,0 +1,17 @@
+[package]
+name = "guest"
+authors.workspace = true
+version.workspace =  true
+edition.workspace = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+path = "src/guest_extension.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+api = { workspace = true }
+
+# [package.metadata.component]
+# package = "cool:extension"
