@@ -1,0 +1,12 @@
+package cool:extension;
+
+world extension {
+    variant data-variant {
+        text(string),
+        number(f64),
+        boolean(bool)
+    }
+
+    export init-extension: func();
+    export invoke-func: func(fnname: string, args: list<data-variant>) -> result<data-variant, string>;
+}

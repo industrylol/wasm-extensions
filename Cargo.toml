@@ -1,0 +1,22 @@
+[workspace]
+members = [
+    "crates/api",
+    "crates/guest",
+    "crates/host"
+]
+
+workspace.resolver = "2"
+
+[workspace.package]
+authors = ["Adam Hill"]
+version = "0.1.0"
+edition = "2021"
+
+[workspace.dependencies]
+wasmtime = "26.0"
+wasmtime-wasi = "26.0"
+wit-bindgen = "0.34.0"
+tokio = { version = "1.41" }
+
+api = { path = "crates/api" }
+guest = { path = "crates/guest" }
